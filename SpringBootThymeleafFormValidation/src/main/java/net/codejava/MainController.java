@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
@@ -25,13 +26,20 @@ public class MainController {
   @PostMapping("/register")
   public String submitForm(@Valid @ModelAttribute("user") User user, BindingResult bindingResult,
       Model model) {
-    System.out.println(user);
     usuarios.add(user);
     if (bindingResult.hasErrors()) {
-      return "register_form";
+      user.setError(0);
     } else {
-      model.addAttribute("users", usuarios);
-      return "register_success";
+      user.setError(1);
     }
+
+    model.addAttribute("users", usuarios);
+    return "register_form";
+  }
+  
+  @RequestMapping("/eliminar")
+  public String deleteAll() {
+    usuarios.clear();
+    return  "index";
   }
 }

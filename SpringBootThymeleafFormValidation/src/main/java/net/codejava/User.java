@@ -18,6 +18,19 @@ public class User {
 	
 	@Pattern(regexp ="(3(([0-9]{9})))", message ="El número de telefono no cumple con el formato correcto")
 	private String telefono;
+	
+	
+	private int error;
+	
+	
+
+  public int getError() {
+    return error;
+  }
+
+  public void setError(int error) {
+    this.error = error;
+  }
 
   public String getName() {
     return name;
