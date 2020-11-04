@@ -1,0 +1,60 @@
+.caja {
+	font-weight: 500;
+	border-radius: 14px;
+	border: solid;
+	border-width: 2px;
+	border-color: #eeeeee;
+	width:100%;
+	padding:20px;
+	margin: 10px;
+}
+.form{
+	margin: 30px;
+}
+
+.cabecera {
+	border-bottom: solid;
+	border-width: 1px;
+	padding: 2px 0 0 5px;
+}
+
+.cuerpo {
+	border-bottom: solid;
+	border-width: 1px;
+	padding: 2px 0 0 5px;
+	font-size: 20px;
+}
+
+.caja2{
+	font-size: 15px;
+}
+
+span{
+	font-size: 10px;
+}
+
+#boton {
+	font-weight:800;
+	font-size:15px;
+	height:50px;
+	border-radius: 15px;
+	box-shadow: 1px 1px 2px 1px #1919e6;
+}
+
+#campo{
+	font-size:15px;
+	font-weight:500;
+	background-color:#f4f4f4;
+	border-radius:15px;
+	height: 50px;
+}
+
+span{
+	color:red;
+}
+
+.usuario {
+	font-weight: 800;
+	text-align: center;
+	font-size: 30px;
+}
